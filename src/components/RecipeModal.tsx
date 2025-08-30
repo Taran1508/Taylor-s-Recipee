@@ -83,7 +83,7 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ recipe, onClose }) => {
         backgroundPosition: "center",
       }}
     >
-      <div className="bg-[var(--background)] p-6 rounded-lg max-w-lg w-full overflow-auto max-h-[90vh]">
+      <div className="bg-[hsl(var(--background))] p-6 rounded-lg max-w-lg w-full overflow-auto max-h-[90vh]">
         <div className="flex flex-row justify-between items-start">
           <h2 id="modal-title" className="text-2xl font-bold mb-2">
             {details.strMeal}
