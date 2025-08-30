@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: rgb(255, 250, 230);
+    --foreground: rgb(0, 0, 0);
+    --footerr: rgb(250, 250, 250);
+    --textb: rgb(0, 52, 35);
+
+    --card: 340 35% 55%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 340 35% 55%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 340 50% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 40% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 340 30% 40%;
+    --muted-foreground: 0 0% 90%;
+
+    --accent: 340 35% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 20% 80%;
+    --input: 0 0% 100%;
+    --ring: 340 50% 45%;
+
+    /* LinGrads */
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(340, 45%, 65%) 0%,
+      hsl(330, 50%, 40%) 100%
+    );
+    /* --gradient-hero: hsl(160, 100%, 10%); */
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(220, 25%, 8%) 0%,
+      hsl(160, 97%, 25%) 50%,
+      hsl(160, 100%, 10%) 100%
+    );
+
+    --footer: rgb(125, 46, 0);
+    --chef-pink: 340 45% 65%;
+    --chef-burgundy: 330 50% 40%;
+    --chef-dark: rgb(0, 22, 15);
+    --chef-accent: #ccff007e;
+
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--chef-dark) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--chef-pink) / 0.2);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: rgb(15, 15, 15);
+    --foreground: rgb(250, 250, 250);
+    --footerr: rgb(255, 255, 255);
+    --textb: rgb(207, 78, 121);
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 340 45% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 220 15% 18%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 340 45% 65%;
+
+    /* Dark mode ChefAI colors */
+    --chef-pink: 340 45% 65%;
+    --chef-burgundy: 330 50% 45%;
+    --chef-dark: #505050e5;
+    --chef-accent: #0f1200e5;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(340, 45%, 35%) 0%,
+      hsl(330, 50%, 20%) 100%
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(220, 25%, 8%) 0%,
+      hsl(340, 45%, 25%) 50%,
+      hsl(330, 50%, 15%) 100%
+    );
+  }
+}
+
+@layer base {
+  * {
+    border: var(--border);
+    font-family: "Montserrat", sans-serif;
+  }
+
+  body {
+    background-color: var(--background);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  /* .w-120 {
+    width: 30rem;
+  }
+  .w-125 {
+    width: 31.25rem;
+  }
+  .w-130 {
+    width: 32.5rem;
+  }
+  .right-26 {
+    right: 6.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:w-120 {
+      width: 30rem;
+    }
+    .lg\:w-125 {
+      width: 31.25rem;
+    }
+    .lg\:w-130 {
+      width: 32.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .xl\:w-120 {
+      width: 30rem;
+    }
+    .xl\:w-125 {
+      width: 31.25rem;
+    }
+    .xl\:w-130 {
+      width: 32.5rem;
+    }
+  } */
+}
+
+.cursive-text {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
