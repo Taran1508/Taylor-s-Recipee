@@ -119,7 +119,7 @@ Taylor's Recipee is a single-page application (SPA) for discovering meals by ing
 
 ## **ChatGPT Reference**
 
-- Placeholder for conversation link(s): [https://chatgpt.com/share/68b029ee-36dc-800d-9a54-2eadf9f67a04]()
+- [Conversation Link :](https://chatgpt.com/share/68b029ee-36dc-800d-9a54-2eadf9f67a04)
 - Prompts used:
   - Initial HLA, LLD, architecture planning
   - React Query caching strategies
